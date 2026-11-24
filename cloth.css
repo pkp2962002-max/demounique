@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: ivory;
+    color: black;
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: pink;
+    padding: 25px 8px;
+    position: static;
+    top: 0;
+    z-index: 1000;
+    animation: slideDown 0.8s ease;
+}
+.logo{
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: rgb(200, 29, 29);
+}
+.logo span{
+    color: sienna;
+}
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-links a{
+    font-size: 18px;
+    transition:  color 0.3s ease;
+}
+
+.nav-links a:hover{
+    color: sienna;
+}
+
+.nav-btn{
+    border: 2px solid black;
+    padding: 12px 24px;
+    border-radius: 3px;
+    transition: 0.3s ease;
+}
+
+.nav-btn:hover{
+    background-color: black;
+    color: white;
+}

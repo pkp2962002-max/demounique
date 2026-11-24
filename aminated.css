@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: linear-gradient(135deg,rgb(207, 146, 23),rgb(10, 216, 93),blue);
+    overflow: hidden;
+}
+.background{
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    z-index:-1 ;
+}
+
+.shape{
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(2px);
+    animation: float 6s ease-in-out infinite alternate;
+}
+.shape1{
+    width: 220px;
+    height: 220px;
+    background: linear-gradient(135deg,white,purple);
+  top: 10%;
+  left: 15%;
+}
+.shape2{
+    width: 270px;
+    height: 270px;
+    background: linear-gradient(135deg,pink,green);
+    bottom: 8%;
+    right: 12%;
+    animation-delay: 1.5s;
+}
+
+.login-container{
+    width: 90%;
+    max-width: 400px;
+    padding: 40px 35px;
+    background: rgba(255, 255, 255, 0.10);
+    border: 2px solid white;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px whitesmoke;
+    backdrop-filter: blur(15px); 
+    -webkit-backdrop-filter: blur(15px);
+    animation: appear 0.9s ease forwards;
+}
+
+.login-form h2{
+color: white;
+text-align: center;
+font-size: 30px;
+margin-bottom: 10px;
+}
+
+.subtitle{
+    color: white;
+    font-size: 15px;
+    margin-bottom: 35px;
+
+}
+
+.input-box{
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.input-box input{
+    padding: 13px 10px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.input-box label{
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    color: white;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+.input-box input:focus,.input-box input:valid{
+    border-bottom-color: rgb(168, 112, 112);
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label{
+    top: -12px;
+   left: 0;
+   font-size: 12px;
+   color: rgba(15, 23, 248, 0.836);
+}
+
+.form-option{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    margin: 5px 0 25px;
+    font-size: 15px;
+}
+
+.Remember{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: rgb(18, 18, 18);
+}
+
+.form-option a,.singup a{
+    color: blue;
+    text-decoration: none;
+}
+
+.form-option a:hover,.singup a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.login-btn{
+    width: 100%;
+    padding: 14px;
+    border: none;
+    background: linear-gradient(90deg,#242124 ,#234672,#222);
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.login-btn:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px white;
+    border-radius: 18px;
+}
+
+.singup{
+    color: white;
+    margin-top: 25px;
+    text-align: center;
+}
+@keyframes appear{
+    from{
+        opacity: 0;
+        transform: translateY(50px) scale(0.95);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes float{
+    from{
+        transform: translate(0,0) scale(1);
+    }
+    to{
+        transform: translate(25px,-35px) scale(1.08);
+    }
+}
